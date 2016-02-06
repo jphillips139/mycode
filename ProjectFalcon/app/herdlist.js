@@ -24,9 +24,10 @@ function listViewItemTap(args) {
  //     }
 //};
 
-	//frameModule.topmost().navigate(navigationEntry); 
-    frameModule.topmost().navigate("cowlist");
+	//frameModule.topmost().navigate(navigationEntry);
+    
     herdListVM.herdListViewModel.set("selectedItem", args.view.bindingContext);
+    frameModule.topmost().navigate("cowlist");
 }
 exports.listViewItemTap = listViewItemTap;
 
