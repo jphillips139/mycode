@@ -1,4 +1,4 @@
-<Page xmlns="http://www.nativescript.org/tns.xsd" navigatedTo="load"  navigatedTo="navigatedTo">
+<Page xmlns="http://www.nativescript.org/tns.xsd" navigatedTo="navigatedTo">
     <StackLayout orientation="vertical" row="0">
         <Label text="Cow List"/>
         <Label text="{{ name }}"/>
