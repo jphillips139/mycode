@@ -12,7 +12,7 @@ var herdListViewModel = require("./herdlist-view-model");
 
 function pageLoaded(args) {
     var page = args.object;
-    page.bindingContext = herdListViewModel.mainViewModel.get("selectedItem");
+    page.bindingContext = herdListViewModel.herdListViewModel.get("selectedItem");
 }
 exports.load = pageLoaded;
 
