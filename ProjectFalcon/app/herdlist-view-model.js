@@ -17,11 +17,11 @@ var items = new observableArray.ObservableArray();
 
 el.data("Herd").get().then(function (data) {
     data.result.forEach(function (herd) {
-        items.push({
-            id: herd.Id,
-            herdNumber: herd.HerdNumber,
-            name: herd.Name
-        });
+        items.push(new ViewModelItem(
+            herd.Id,
+            herd.HerdNumber,
+            herd.Name
+        );
     });
 });
 

@@ -5,7 +5,7 @@
             <TextField id="herd" width="200" text="{{ herd }}" hint="Create a Herd" />
             <Button text="Add" tap="addHerd"></Button>
        
-        <ListView items="{{ herds }}" row="1">
+        <ListView items="{{ items }}" row="1">
             <ListView.itemTemplate>
                 <Button text="{{ name }}" tap="cowListNavigate" />
             </ListView.itemTemplate>
