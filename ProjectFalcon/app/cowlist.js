@@ -13,6 +13,7 @@ var herdListVM = require("./herdlist-view-model");
 function pageNavigatedTo(args) {
     var page = args.object;
     page.bindingContext = herdListVM.herdListViewModel.get("selectedItem");
+    alert(herdListVM.herdListViewModel.get("selectedItem"));
 }
 exports.pageNavigatedTo = pageNavigatedTo;
 
