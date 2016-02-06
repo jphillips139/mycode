@@ -17,8 +17,8 @@ var vmModule = require("./herdlist-view-model");
 function pageLoaded(args) {
     var page = args.object;
     page.bindingContext = vmModule.herdListViewModel;
+    alert("loaded");
 }
-
 exports.load = pageLoaded;
 
 //function (args) {
