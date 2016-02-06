@@ -26,7 +26,7 @@ function listViewItemTap(args) {
 
 	//frameModule.topmost().navigate(navigationEntry); 
     frameModule.topmost().navigate("cowlist");
-    herdListViewModel.herdListViewModel.set("selectedItem", args.view.bindingContext);
+    herdListViewModel.herdListViewModel.set("selectedItem", args.object.bindingContext);
 }
 exports.listViewItemTap = listViewItemTap;
 
