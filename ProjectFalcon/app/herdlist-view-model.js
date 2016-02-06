@@ -21,7 +21,7 @@ el.data("Herd").get().then(function (data) {
             herd.Id,
             herd.HerdNumber,
             herd.Name
-        );
+        ));
     });
 });
 
