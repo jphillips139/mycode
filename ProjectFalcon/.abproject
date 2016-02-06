@@ -1,0 +1,28 @@
+{
+  "ProjectName": "ProjectFalcon",
+  "ProjectGuid": "1c36bb65-b5fd-4cff-a6d7-806a03a01346",
+  "projectVersion": 1,
+  "AppIdentifier": "com.telerik.ProjectFalcon",
+  "DisplayName": "ProjectFalcon",
+  "Author": "",
+  "Description": "ProjectFalcon",
+  "BundleVersion": "1.0",
+  "AndroidVersionCode": "1",
+  "iOSDeviceFamily": [
+    "1",
+    "2"
+  ],
+  "iOSBackgroundMode": [],
+  "ProjectTypeGuids": "{F0A65104-D4F4-4012-B799-F612D75820F6}",
+  "AndroidPermissions": [
+    "android.permission.INTERNET"
+  ],
+  "DeviceOrientations": [
+    "Portrait",
+    "Landscape"
+  ],
+  "AndroidHardwareAcceleration": "false",
+  "iOSStatusBarStyle": "Default",
+  "FrameworkVersion": "1.5.2",
+  "Framework": "NativeScript"
+}
