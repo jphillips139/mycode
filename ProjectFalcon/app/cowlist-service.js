@@ -23,7 +23,7 @@ Service.prototype.getAllRecords = function(args) {
     
     var query = new everLive.Query();
     query.order("CowId");
-    query.where().eq('Id', '9b560c70-cd00-11e5-9bf5-f3eed0dc9602');
+    query.where().eq('Herd', '9b560c70-cd00-11e5-9bf5-f3eed0dc9602');
     query.expand(expandExp)
     
     return data.get(query)
