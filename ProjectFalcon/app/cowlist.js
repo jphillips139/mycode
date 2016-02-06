@@ -42,7 +42,7 @@ function navigatedTo(args) {
         	alert("failed");
         });
     
-    alert(itemsList.length)
+    //alert(itemsList.length)
 }
 exports.navigatedTo = navigatedTo;
 
