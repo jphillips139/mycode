@@ -8,13 +8,13 @@ var viewModule = require("ui/core/view");
 var buttonModule = require("ui/button");
 var observableModule = require("data/observable");
 var observableArray = require("data/observable-array");
-var herdListViewModel = require("./herdlist-view-model");
+var herdListVM = require("./herdlist-view-model");
 
-function pageLoaded(args) {
+function pageNavigatedTo(args) {
     var page = args.object;
-    page.bindingContext = herdListViewModel.herdListViewModel.get("selectedItem");
+    page.bindingContext = herdListVM.herdListViewModel.get("selectedItem");
 }
-exports.load = pageLoaded;
+exports.pageNavigatedTo = pageNavigatedTo;
 
 //var page;
 //var pageData = new observableModule.Observable();

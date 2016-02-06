@@ -8,11 +8,11 @@ var viewModule = require("ui/core/view");
 var buttonModule = require("ui/button");
 var observableModule = require("data/observable");
 var observableArray = require("data/observable-array");
-var herdListViewModel = require("./herdlist-view-model");
+var herdListVM = require("./herdlist-view-model");
 
 function pageLoaded(args) {
     var page = args.object;
-    page.bindingContext = herdListViewModel.herdListViewModel;
+    page.bindingContext = herdListVM.herdListViewModel;
 }
 exports.load = pageLoaded;
 
@@ -26,7 +26,7 @@ function listViewItemTap(args) {
 
 	//frameModule.topmost().navigate(navigationEntry); 
     frameModule.topmost().navigate("cowlist");
-    herdListViewModel.herdListViewModel.set("selectedItem", args.object.bindingContext);
+    herdListVM.herdListViewModel.set("selectedItem", args.view.bindingContext);
 }
 exports.listViewItemTap = listViewItemTap;
 

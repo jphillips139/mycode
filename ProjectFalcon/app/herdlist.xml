@@ -5,9 +5,9 @@
             <TextField id="herd" width="200" text="{{ herd }}" hint="Create a Herd" />
             <Button text="Add" tap="addHerd"></Button>
        
-        <ListView items="{{ items }}" row="1">
+        <ListView items="{{ items }}" itemTap="listViewItemTap" row="1">
             <ListView.itemTemplate>
-                <Button text="{{ name }}" tap="listViewItemTap" />
+                <Label text="{{ name }}" />
             </ListView.itemTemplate>
         </ListView>
     </StackLayout>
