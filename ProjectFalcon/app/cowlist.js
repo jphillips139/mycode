@@ -9,7 +9,7 @@ var buttonModule = require("ui/button");
 var observableModule = require("data/observable");
 var observableArray = require("data/observable-array");
 var herdListVM = require("./herdlist-view-model");
-var cowlistService = require('./cowlist-service'),
+var cowlistService = require('./cowlist-service');
 
 function navigatedTo(args) {
     var page = args.object;
