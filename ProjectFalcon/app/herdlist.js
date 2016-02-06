@@ -10,19 +10,8 @@ var observableModule = require("data/observable");
 var observableArray = require("data/observable-array");
 
 var page;
-
-exports.herdedit = function (args) {
-     frameModule.topmost().navigate("./herdedit");
-};
-
-exports.cowlist = function (args) {
-     frameModule.topmost().navigate("./cowlist");
-};
-
-
-
-var herds = new observableArray.ObservableArray([]);
 var pageData = new observableModule.Observable();
+var herds = new observableArray.ObservableArray([]);
 
 exports.load = function (args) {
     page = args.object;
@@ -30,20 +19,10 @@ exports.load = function (args) {
     pageData.set("herds", herds);
     page.bindingContext = pageData;
     // Empty the array for subsequent visits to the page
-    while (herds.length) {
-        herds.pop();
-    }
+    //while (herds.length) {
+    //    herds.pop();
+    //}
     loadHerd();
-};
-
-exports.add = function () {
-    // Dismiss the keyboard before adding to the list
-    viewModule.getViewById(page, "herd").dismissSoftInput();
-
-    addHerd(pageData.get("herd"));
-
-    // Clear the text field
-    pageData.set("herd", "");
 };
 
 function loadHerd() {
@@ -57,6 +36,20 @@ function loadHerd() {
     });
 }
 
+exports.cowListNavigate = function (args) {
+     frameModule.topmost().navigate("./cowlist");
+};
+
+exports.addHerd = function () {
+    // Dismiss the keyboard before adding to the list
+    viewModule.getViewById(page, "herd").dismissSoftInput();
+
+    addHerd(pageData.get("herd"));
+
+    // Clear the text field
+    pageData.set("herd", "");
+};
+
 function addHerd(herd) {
     el.data("Herd").create({
         Name: herd
@@ -66,3 +59,7 @@ function addHerd(herd) {
         });
     });
 }
+
+exports.editHerd = function (args) {
+     frameModule.topmost().navigate("./herdedit");
+};

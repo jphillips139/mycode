@@ -1,13 +1,13 @@
 <Page xmlns="http://www.nativescript.org/tns.xsd" navigatedTo="load">
         <StackLayout orientation="vertical" row="0">
             <Label text="Herd List"/>
-      <Button text="Herd Add/Edit" tap="herdedit"></Button>
+      <Button text="Herd Add/Edit" tap="editHerd"></Button>
             <TextField id="herd" width="200" text="{{ herd }}" hint="Create a Herd" />
-            <Button text="Add" tap="add"></Button>
+            <Button text="Add" tap="addHerd"></Button>
        
         <ListView items="{{ herds }}" row="1">
             <ListView.itemTemplate>
-                <Button text="{{ name }}" tap="cowlist" />
+                <Button text="{{ name }}" tap="cowListNavigate" />
             </ListView.itemTemplate>
         </ListView>
     </StackLayout>
