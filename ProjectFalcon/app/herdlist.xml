@@ -2,13 +2,12 @@
         <StackLayout orientation="vertical" row="0">
             <Label text="Herd List"/>
       <Button text="Herd Add/Edit" tap="herdedit"></Button>
-      <Button text="Cow List" tap="cowlist"></Button>
             <TextField id="herd" width="200" text="{{ herd }}" hint="Create a Herd" />
             <Button text="Add" tap="add"></Button>
        
         <ListView items="{{ herds }}" row="1">
             <ListView.itemTemplate>
-                <Label text="{{ name }}"/>
+                <Button text="{{ name }}" tap="cowlist" />
             </ListView.itemTemplate>
         </ListView>
     </StackLayout>
