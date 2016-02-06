@@ -1,8 +1,16 @@
-<Page xmlns="http://www.nativescript.org/tns.xsd" navigatedTo="load">
-  <StackLayout orientation="vertical" row="0">
-      <Label text="Cow List"/>
-      <Button text="Cow Add/Edit" tap="cowedit"></Button>
-      <Button text="Cow Trait" tap="cowtraits"></Button>
-      <Button text="Done" tap="herdlist"></Button>
+<Page xmlns="http://www.nativescript.org/tns.xsd" navigatedTo="load"  navigatedTo="navigatedTo">
+    <StackLayout orientation="vertical" row="0">
+        <Label text="Cow List"/>
+        <Button text="Cow Add/Edit" tap="cowedit"></Button>
+        <Button text="Cow Trait" tap="cowtraits"></Button>
+        <Button text="Done" tap="herdlist"></Button>
+        <TextField id="cow" width="200" text="{{ cow }}" hint="Create a Cow" />
+            <Button text="Add" tap="addCow"></Button>
+       
+        <ListView items="{{ cows }}" row="1">
+            <ListView.itemTemplate>
+                <Button text="{{ name }}" tap="cowTraitNavigate" />
+            </ListView.itemTemplate>
+        </ListView>
     </StackLayout>
 </Page>
