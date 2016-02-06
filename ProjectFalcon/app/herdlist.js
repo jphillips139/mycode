@@ -10,38 +10,11 @@ var observableModule = require("data/observable");
 var observableArray = require("data/observable-array");
 var vmModule = require("./herdlist-view-model");
 
-//var page;
-//var pageData = new observableModule.Observable();
-//var herds = new observableArray.ObservableArray([]);
-
 function pageLoaded(args) {
     var page = args.object;
     page.bindingContext = vmModule.herdListViewModel;
 }
 exports.load = pageLoaded;
-
-//function (args) {
-//    page = args.object;
-//    pageData.set("herd", "");
-//    pageData.set("herds", herds);
-//    page.bindingContext = pageData;
-//    // Empty the array for subsequent visits to the page
-//    while (herds.length) {
-//        herds.pop();
-//    }
-//    loadHerd();
-//};
-
-//function loadHerd() {
-//    el.data("Herd").get().then(function (data) {
-//        data.result.forEach(function (herd) {
-//            herds.push({
-//                name: herd.Name,
-//                id: herd.Id
-//            });
-//        });
-//    });
-//}
 
 exports.cowListNavigate = function (args) {
  var navigationEntry = {
