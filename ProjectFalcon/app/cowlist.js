@@ -35,8 +35,8 @@ function navigatedTo(args) {
             //viewModel.set('listItems', itemsList);
             //viewModel.set('isLoading', false);
         	
-        	alert("success");
-        alert(itemsList.length);
+        	//alert("success");
+        	alert(itemsList.length);
         })
         .catch(function onCatch() {
             //viewModel.set('isLoading', false);
