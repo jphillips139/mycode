@@ -19,9 +19,9 @@ exports.load = function (args) {
     pageData.set("herds", herds);
     page.bindingContext = pageData;
     // Empty the array for subsequent visits to the page
-    //while (herds.length) {
-    //    herds.pop();
-    //}
+    while (herds.length) {
+        herds.pop();
+    }
     loadHerd();
 };
 
@@ -37,7 +37,14 @@ function loadHerd() {
 }
 
 exports.cowListNavigate = function (args) {
-     frameModule.topmost().navigate("./cowlist");
+ var navigationEntry = {
+      moduleName : "./cowlist",
+      context : {
+              herdId : args.object.bindingContext.id
+      }
+};
+
+frameModule.topmost().navigate(navigationEntry);
 };
 
 exports.addHerd = function () {
