@@ -9,10 +9,40 @@ var buttonModule = require("ui/button");
 var observableModule = require("data/observable");
 var observableArray = require("data/observable-array");
 var herdListVM = require("./herdlist-view-model");
+var cowlistService = require('./cowlist-service'),
 
 function navigatedTo(args) {
     var page = args.object;
+    
     page.bindingContext = herdListVM.herdListViewModel.get("selectedItem");
+    
+                var itemsList = [];
+    
+    cowlistService.getAllRecords()
+        .then(function(result) {
+
+            result.forEach(function(item) {
+
+
+                itemsList.push({
+
+                    cowId: item.CowId,
+                    barnName: item.BarnName
+
+                });
+            });
+
+            //viewModel.set('listItems', itemsList);
+            //viewModel.set('isLoading', false);
+        	
+        	alert("success");
+        })
+        .catch(function onCatch() {
+            //viewModel.set('isLoading', false);
+        	alert("failed");
+        });
+    
+    alert(itemList.length)
 }
 exports.navigatedTo = navigatedTo;
 
