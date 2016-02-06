@@ -8,24 +8,27 @@ var viewModule = require("ui/core/view");
 var buttonModule = require("ui/button");
 var observableModule = require("data/observable");
 var observableArray = require("data/observable-array");
-var vmModule = require("./herdlist-view-model");
+var herdListViewModel = require("./herdlist-view-model");
 
 function pageLoaded(args) {
     var page = args.object;
-    page.bindingContext = vmModule.herdListViewModel;
+    page.bindingContext = herdListViewModel.herdListViewModel;
 }
 exports.load = pageLoaded;
 
-exports.cowListNavigate = function (args) {
- var navigationEntry = {
-      moduleName : "./cowlist",
-      context : {
-              herdId : args.object.bindingContext.id
-      }
-};
+function listViewItemTap(args) {
+ //var navigationEntry = {
+ //     moduleName : "./cowlist",
+ //     context : {
+ //             herdId : args.object.bindingContext.id
+ //     }
+//};
 
-frameModule.topmost().navigate(navigationEntry);
-};
+	//frameModule.topmost().navigate(navigationEntry); 
+    frameModule.topmost().navigate("cowlist");
+    herdListViewModel.mainViewModel.set("selectedItem", args.view.bindingContext);
+}
+exports.listViewItemTap = listViewItemTap;
 
 exports.addHerd = function () {
     // Dismiss the keyboard before adding to the list

@@ -1,6 +1,7 @@
 <Page xmlns="http://www.nativescript.org/tns.xsd" navigatedTo="load"  navigatedTo="navigatedTo">
     <StackLayout orientation="vertical" row="0">
         <Label text="Cow List"/>
+        <Label text="{{ name }}"
         <Button text="Cow Add/Edit" tap="cowedit"></Button>
         <Button text="Cow Trait" tap="cowtraits"></Button>
         <Button text="Done" tap="herdlist"></Button>

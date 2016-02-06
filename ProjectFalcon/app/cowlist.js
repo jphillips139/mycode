@@ -8,11 +8,19 @@ var viewModule = require("ui/core/view");
 var buttonModule = require("ui/button");
 var observableModule = require("data/observable");
 var observableArray = require("data/observable-array");
+var herdListViewModel = require("./herdlist-view-model");
 
-var page;
-var pageData = new observableModule.Observable();
-var cows = new observableArray.ObservableArray([]);
+function pageLoaded(args) {
+    var page = args.object;
+    page.bindingContext = herdListViewModel.mainViewModel.get("selectedItem");
+}
+exports.load = pageLoaded;
 
+//var page;
+//var pageData = new observableModule.Observable();
+//var cows = new observableArray.ObservableArray([]);
+
+/*
 exports.load = function (args) {
     page = args.object;
     pageData.set("cow", "");
@@ -24,6 +32,7 @@ exports.load = function (args) {
     }
     loadCow();
 };
+*/
 
 function loadCow() {
     el.data("Cow").get().then(function (data) {

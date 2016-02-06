@@ -7,7 +7,7 @@
        
         <ListView items="{{ items }}" row="1">
             <ListView.itemTemplate>
-                <Button text="{{ name }}" tap="cowListNavigate" />
+                <Button text="{{ name }}" tap="listViewItemTap" />
             </ListView.itemTemplate>
         </ListView>
     </StackLayout>
