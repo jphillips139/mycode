@@ -10,12 +10,12 @@ var observableModule = require("data/observable");
 var observableArray = require("data/observable-array");
 var herdListVM = require("./herdlist-view-model");
 
-function pageNavigatedTo(args) {
+function navigatedTo(args) {
     var page = args.object;
     page.bindingContext = herdListVM.herdListViewModel.get("selectedItem");
     alert(herdListVM.herdListViewModel.get("selectedItem"));
 }
-exports.pageNavigatedTo = pageNavigatedTo;
+exports.navigatedTo = navigatedTo;
 
 //var page;
 //var pageData = new observableModule.Observable();
