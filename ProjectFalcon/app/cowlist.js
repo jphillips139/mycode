@@ -36,6 +36,7 @@ function navigatedTo(args) {
             //viewModel.set('isLoading', false);
         	
         	alert("success");
+        alert(itemsList.length);
         })
         .catch(function onCatch() {
             //viewModel.set('isLoading', false);
