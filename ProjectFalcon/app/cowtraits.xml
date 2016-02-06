@@ -1,0 +1,6 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" navigatedTo="load">
+  <StackLayout orientation="vertical" row="0">
+      <Label text="Cow Traits"/>
+      <Button text="Done" tap="cowlist"></Button>
+    </StackLayout>
+</Page>

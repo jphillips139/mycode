@@ -1,0 +1,6 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" navigatedTo="load">
+  <StackLayout orientation="vertical" row="0">
+          <Label text="Welcome"/>
+          <Button text="Herd List" tap="herdlist"></Button>
+      </StackLayout>
+</Page>
