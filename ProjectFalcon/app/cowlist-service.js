@@ -1,5 +1,6 @@
 var config = require("./shared/models/config");
 var el = require("./shared/models/el");
+var everLive = require("./everlive/everlive.all.min");
 
 function Service() {}
 
@@ -20,7 +21,7 @@ Service.prototype.getAllRecords = function(args) {
 
     };
     
-    var query = new el.Query();
+    var query = new everLive.Query();
     query.order("CowId");
     query.where().eq('Id', '9b560c70-cd00-11e5-9bf5-f3eed0dc9602');
     query.expand(expandExp)
